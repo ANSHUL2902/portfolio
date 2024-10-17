@@ -1,0 +1,232 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #082627;
+    font-family: Arial, sans-serif;
+   
+}
+
+
+header nav {
+    z-index: 100; 
+    width: 100%;
+    margin: -80px 0 0 -8px; /* top right bottom left */
+position: fixed;
+    display: flex;
+    background-color: #415256;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1px;
+
+    
+    
+}
+        
+        header nav a {
+            
+            color: #0f0500; /* Text color for nav items */
+            text-decoration: none; /* Remove underline */
+            padding: 10px 15px; /* Add some padding to links for better click area */
+            border-radius: 5px; /* Optional: round the corners */
+            transition: background-color 0.3s; /* Optional: smooth transition for hover effect */
+
+
+        }
+        
+        header nav a:hover {
+            background-color: rgba(0, 0, 0, 0.75); /* Change background color on hover */
+            color: #1588fc; /* Change text color on hover */
+        }
+        .profile {
+            position: relative; /* Make the profile section relative */
+            width: 105%;
+            margin: 80px auto 0 -10px;
+            margin-top: 80px;
+            background-image: url("../Assests/background.jpg");
+            background-size: cover; /* Make the background image cover the entire area */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            text-align: center; 
+        
+           
+            padding: 50px 0;
+           
+        }
+
+        .img-class{
+        
+            width: 150px;
+            border-radius: 50%;
+            animation: float 2s ease-in-out infinite;
+        }
+
+        /* Logo floating up and down */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Centering the typewriter container */
+        .typewriter-container {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Center vertically if needed */
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Typing effect */
+        .typewriter {
+            font-size: 36px;
+            color: black;
+            overflow: hidden; /* Ensures that the text is hidden initially */
+            white-space: nowrap; /* Prevents the text from breaking to the next line */
+            border-right: 2px solid black; /* The cursor */
+            display: inline-block; /* Ensure it takes up space */
+            animation: typing 2s steps(20, end) forwards, blink 0.75s step-end infinite;
+            animation-fill-mode: forwards; /* Keep the final state of the animation */
+        }
+
+        /* Typing effect keyframes */
+        @keyframes typing {
+            0% { width: 0; }
+            100% { width: 20ch; } /* Fully typed text at 100% */
+        }
+
+        /* Blinking cursor effect */
+        @keyframes blink {
+            from, to { border-color: transparent; }
+            50% { border-color: black; }
+        }
+
+        .resume-button {
+            padding: 10px 20px;
+            background-color: #303038;
+            color: #1588fc;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .social-icons a {
+            margin: 10px;
+            font-size: 24px;
+        }
+
+        .round-image {
+            border-top-left-radius: 115px;
+            border-bottom-right-radius: 115px;
+            
+           
+          }
+
+          .main-container {
+            margin-top: 0px; /* Adjust the value as needed */
+        }
+
+
+        table {
+            border-collapse: collapse;
+            width: 100%; /* Ensure the table takes up the full width of its container */
+          }
+          
+          td {
+            width: 30px;
+            height: 30px;
+            padding: 5px; /* Add padding for better spacing */
+           
+            text-align: center; /* Center the content within each cell */
+          }
+          
+          img {
+            max-width: 30%; /* Ensure images don't exceed their cell's width */
+            height: auto; /* Maintain aspect ratio */
+          }
+          footer {  
+            background-color: #1a1a1a;  
+            color: #ffffff;  
+            padding: 20px;  
+        }  
+        
+        .footer-container {  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: flex-start;  
+        }  
+        
+        .contact-info {  
+            margin-left: 100px;
+            width: 40%;  
+        }  
+        
+        .contact-info h2 {  
+            font-size: 24px;  
+            margin-bottom: 10px;  
+        }  
+        
+        .contact-info p {  
+            margin: 5px 0;  
+        }  
+        
+        .contact-form {  
+            margin-right: 100px;
+            width: 55%;  
+        }  
+        
+        .contact-form form {  
+            display: flex;  
+            flex-direction: column;  
+        }  
+        
+        .contact-form label {  
+            margin: 10px 0 5px;  
+        }  
+        
+        .contact-form input,   
+        .contact-form textarea {  
+            padding: 10px;  
+            margin-bottom: 15px;  
+            border: 1px solid #ccc;  
+            border-radius: 5px;  
+            background-color: #2a2a2a;  
+            color: #ffffff;  
+        }  
+        
+        .contact-form button {  
+            padding: 10px;  
+            background-color: #007bff;  
+            color: #ffffff;  
+            border: none;  
+            border-radius: 5px;  
+            cursor: pointer;  
+        }  
+        
+        .contact-form button:hover {  
+            background-color: #0056b3;  
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+          
+        }
+        
+        footer img {
+            width: 50px; /* Adjust the width as needed */
+            height: 50px; /* Adjust the height as needed */
+            margin: 5px; /* Add spacing between icons */
+            border-radius: 50%; /* Make the icons round */
+            cursor: pointer; /* Change the cursor to indicate clickability */
+        }
+       
+        #home, #about, #skills, #projects, #contact {
+            
+            scroll-margin-top: 100px; /* Adjust based on the height of your navbar */
+          }
