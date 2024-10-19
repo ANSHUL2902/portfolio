@@ -151,47 +151,34 @@ position: fixed;
             height: auto; /* Maintain aspect ratio */
           }
           footer {  
+           
             background-color: #1a1a1a;  
             color: #ffffff;  
             padding: 20px;  
         }  
         
         .footer-container {  
-            display: flex;  
-            justify-content: space-between;  
-            align-items: flex-start;  
-        }  
-        
-        .contact-info {  
-            margin-left: 100px;
-            width: 40%;  
-        }  
-        
-        .contact-info h2 {  
-            font-size: 24px;  
-            margin-bottom: 10px;  
-        }  
-        
-        .contact-info p {  
-            margin: 5px 0;  
-        }  
-        
-        .contact-form {  
-            margin-right: 100px;
-            width: 55%;  
+            text-align: center;
         }  
         
         .contact-form form {  
-            display: flex;  
-            flex-direction: column;  
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-content: space-around;
+            align-items: center;
         }  
         
         .contact-form label {  
-            margin: 10px 0 5px;  
+           text-align: center;
+            
         }  
         
         .contact-form input,   
         .contact-form textarea {  
+           text-align: center;
+            width: 300px;
             padding: 10px;  
             margin-bottom: 15px;  
             border: 1px solid #ccc;  
