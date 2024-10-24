@@ -56,8 +56,15 @@ position: fixed;
            
         }
 
+                .about-img{
+                    width: 200px;
+                    height: 200px;
+                    border-top-left-radius: 40%;
+                    border-bottom-right-radius: 40%;
+                }
+
         .img-class{
-        
+        height: 150px;
             width: 150px;
             border-radius: 50%;
             animation: float 2s ease-in-out infinite;
@@ -133,22 +140,12 @@ position: fixed;
         }
 
 
-        table {
-            border-collapse: collapse;
-            width: 100%; /* Ensure the table takes up the full width of its container */
-          }
-          
-          td {
-            width: 30px;
-            height: 30px;
-            padding: 5px; /* Add padding for better spacing */
-           
-            text-align: center; /* Center the content within each cell */
-          }
+        
           
           img {
-            max-width: 30%; /* Ensure images don't exceed their cell's width */
-            height: auto; /* Maintain aspect ratio */
+            
+            width:  50px; /* Ensure images don't exceed their cell's width */
+            height: 50px; /* Maintain aspect ratio */
           }
           footer {  
            
@@ -216,4 +213,52 @@ position: fixed;
         #home, #about, #skills, #projects, #contact {
             
             scroll-margin-top: 100px; /* Adjust based on the height of your navbar */
+          }
+
+
+
+          .scroller {
+            margin-top: 30px;
+            overflow: hidden;
+          }
+          
+          .skill-list {
+            display: flex;
+            gap: 1rem;
+            padding-block: 10px;
+            flex-wrap: nowrap; /* Prevent wrapping so that items scroll horizontally */
+            animation: scroll 8s linear infinite;
+           
+          }
+          
+          .skill-list li {
+            list-style: none;
+            padding: 10px;
+          }
+
+          .scroller[data-animation="true"]  {
+           overflow: hidden;
+
+          }
+          
+          .scroller[data-animation="true"] .skill-list {
+            width: max-content;
+            flex-wrap: nowrap;
+            animation: scroll 20s linear infinite;
+        }
+          
+          @keyframes scroll {
+          to {
+              transform: translateX(calc(-50%)); 
+            }
+          }
+          
+         
+          .scroller:hover .skill-list {
+            animation-play-state: paused;
+          }
+          
+          h3 {
+            font-size: 1.5rem;
+            color: chocolate;
           }
