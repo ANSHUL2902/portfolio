@@ -3,85 +3,104 @@ html {
   }
 body {
   color: white;
-  background-color: #000000;
+  background-color: #080808;
   font-family: Arial, sans-serif;
 }
+
+
+  
+  .logo {
+    color: #000000c4;
+    font-size: 27px;
+    font-weight: 1000;
+    font-variant: all-small-caps;
+    margin-right: 20px;
+  font-size: 27px;
+  font-weight: 1000;
+  font-variant: all-small-caps;
+  }
+
+
+
+  .logo:hover {
+    color: #7c131386;
+  }
+
+
+  .nav-links {
+    margin-left: 350px;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  .nav-links a {
+    margin: 0 10px;
+    padding: 6px 15px;
+    color: #757567;
+    border: 1px solid #7a431e;
+    border-radius: 24px;
+    text-decoration: none;
+  }
+
+  .nav-links a:hover {
+    color: #7a431e;
+    border-color: #7a431e;
+  }
+
+
+
 
 #home,
 #about,
 #resume,
 #skills,
+#Experience,
 #project,
 #contact {
-  scroll-margin-top: 180px; /* Adjust based on the height of your navbar */
+  scroll-margin-top: 200px; /* Adjust based on the height of your navbar */
     
 }
-
 header nav {
-  z-index: 1;
-  width: 98%;
-  margin-top: -80px;
-  margin-left: -7px;
+  z-index: 9999;
+  width: 100%;
   position: fixed;
-  background: transparent;
+  top: 0;
+  height: 13px;
   background-color: rgba(42, 43, 44, 0.788); /* Semi-transparent background */
-
   padding: 30px;
-  flex-direction: row;
-  text-align: center;
-  gap: 0px;
-  
-  
-  backdrop-filter: blur(6px); /* You can adjust the blur value */
-  -webkit-backdrop-filter: blur(10px); /* For Safari support */
-  
-}
-
-header nav a {
-  margin: 20px;
-    padding-right: 25px;
-    padding-left: 25px;
-  color: #757567;
-  border: 1px solid #757567;
-  border-radius: 24px;
-  text-decoration: none; /* Remove underline */
-  padding: 10px 15px; /* Add some padding to links for better click area */
-
-}
-
-header nav a:hover {
-  margin: 20px;
-    padding-right: 25px;
-    padding-left: 25px;
-  color: #7a431e;
-  border: 1px solid #7a431e;
-  border-radius: 24px;
-  text-decoration: none; /* Remove underline */
-  padding: 10px 15px; /* Add some padding to links for better click area */
-
+  display: flex;
+  justify-content: space-between; /* Ensures space between logo and links */
+  align-items: center; /* Aligns vertically in the center */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 /* Hero */
 
 .hero-container {
-    margin-top: 0px; /* Adjust the value as needed */
-  }
+  padding-top: 100px; /* Add padding equivalent to navbar height */
+}
+
+
 .profile {
   width: 100%;
-  margin-top: 80px;
   background-image: url("../Assests/background.jpg");
-  background-size: cover; /* Make the background image cover the entire area */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-size: cover;
+  margin-top: -35px;
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
-  padding: 120px 0;
+  padding: 152px 0; /* Vertical padding inside the hero */
 }
+
 .img-class {
   height: 150px;
   width: 150px;
   border-radius: 50%;
   animation: float 2s ease-in-out infinite;
 }
+
 
 /* Logo floating up and down */
 @keyframes float {
@@ -234,11 +253,11 @@ header nav a:hover {
 }
 .scroller:hover .skill-list h3 {
   animation-play-state: paused;
-  color: #0077ff;
+  color: #0077ff83;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 18px;
   color: rgb(46, 44, 44);
 }
 
@@ -293,6 +312,114 @@ h3 {
   gap: 20px;
   padding: 20px;
 }
+
+/* Experience */
+.timeline-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+background-color: #252424c9;
+  position: relative;
+ padding: 20px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 40px 0;
+  width: 70%;
+  max-width: 1200px;
+  border-radius: 20px;
+}
+
+/* Vertical line in the center */
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 40px; /* Place the line on the left side */
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #3939394d;
+  z-index: 0;
+}
+
+/* Each timeline item */
+.timeline-item {
+  display: flex;
+  position: relative;
+  margin: 30px 0;
+  justify-content: flex-start; /* Align items to the left side */
+  width: 100%;
+}
+
+/* The dot that appears on the timeline */
+.timeline-dot {
+  position: absolute;
+  left: 30px;
+  top: 55px;
+  background-color: #2f493e;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  z-index: 1;
+  border: 1px solid   rgb(8, 8, 8);
+
+}
+
+/* Content box for each experience (on the right side of the line) */
+.timeline-content {
+  background-color: #303030;
+  padding: 20px;
+  border-radius: 25px;
+  position: relative;
+  z-index: 1;
+  margin-left: 53px;
+  width: 57%;
+}
+
+/* The company name */
+.timeline-company {
+  margin: 0;
+  color: #1587fa;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* The year of experience */
+.timeline-year {
+  color: #888;
+  font-size: 0.9em;
+  margin-top: 4px;
+}
+
+/* The description of the experience */
+.timeline-description {
+  margin-top: 10px;
+  color: #727272;;
+  font-size: 1em;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .timeline-container::before {
+    left: 5px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-dot {
+    left: 0;
+    top: 0;
+  }
+
+  .timeline-content {
+    margin-left: 40px;
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+
+
+
 
 /* Grid Item */
 .skill-item {
@@ -361,7 +488,7 @@ h3 {
 
 .skill-list img{
     margin-top: 30px;
-    width: 70px;
+    width: 40px;
 
 }
 
@@ -383,24 +510,19 @@ h3 {
 .my-buttons {
   width: 100px;
   height: 50px;
-  border-radius: 20px;
-  border: 1px solid;
-  margin-top: 20px;
-  padding: 10px 20px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 0, 0);
+  border-radius: 25px;
+  box-shadow: inset 1px 1px 20px 5px rgba(252, 252, 252, 0.308);
+  background: transparent;
+  background-color: #20489756;
+  border: 1px solid rgb(13, 59, 143);
+  margin-top: 40px;
+  color: rgba(255, 255, 255, 0.616);
+ 
 }
 
 .my-buttons:hover {
-  font-size: 15px;
-  width: 100px;
-  height: 50px;
-  border-radius: 20px;
-  border: 1px dotted;
-  margin-top: 20px;
-  padding: 10px 20px;
-  color: rgb(0, 132, 255);
-  background-color: rgb(0, 0, 0);
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.712);
 }
 
 .footer-container {
@@ -530,3 +652,11 @@ h3 {
     opacity: 1;
     transform: translateY(0);
   }
+
+  .credit{
+    margin-left: 1181px;
+    filter: brightness(0.2);
+    font-size: 18px;
+  }
+
+

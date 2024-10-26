@@ -26,3 +26,21 @@ function changeImage() {
 
 // Change image every 3 seconds (3000 milliseconds)
 setInterval(changeImage, 3000);
+
+
+
+//side scrolling
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view'); // Add the class to animate
+      observer.unobserve(entry.target); // Stop observing once the animation has triggered
+    }
+  });
+}, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+
+// Observe each scroll-item
+document.querySelectorAll('.scroll-item').forEach(item => {
+  observer.observe(item);
+});
