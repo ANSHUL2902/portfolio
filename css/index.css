@@ -6,10 +6,7 @@ body {
   background-color: #080808;
   font-family: Arial, sans-serif;
 }
-
-
-  
-  .logo {
+.logo {
     color: #000000c4;
     font-size: 27px;
     font-weight: 1000;
@@ -19,8 +16,6 @@ body {
   font-weight: 1000;
   font-variant: all-small-caps;
   }
-
-
 
   .logo:hover {
     color: #7c131386;
@@ -67,11 +62,11 @@ header nav {
   position: fixed;
   top: 0;
   height: 13px;
-  background-color: rgba(42, 43, 44, 0.788); /* Semi-transparent background */
+  background-color: rgba(42, 43, 44, 0.788);
   padding: 30px;
   display: flex;
-  justify-content: space-between; /* Ensures space between logo and links */
-  align-items: center; /* Aligns vertically in the center */
+  justify-content: space-between;
+  align-items: center;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -101,7 +96,6 @@ header nav {
   animation: float 2s ease-in-out infinite;
 }
 
-
 /* Logo floating up and down */
 @keyframes float {
   0%,
@@ -126,12 +120,11 @@ header nav {
 .typewriter {
   font-size: 36px;
   color: black;
-  overflow: hidden; /* Ensures that the text is hidden initially */
-  white-space: nowrap; /* Prevents the text from breaking to the next line */
-  border-right: 2px solid black; /* The cursor */
-  display: inline-block; /* Ensure it takes up space */
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid black;
+  display: inline-block;
   animation: typing 2s steps(20, end) forwards, blink 0.75s step-end infinite;
-  animation-fill-mode: forwards; /* Keep the final state of the animation */
 }
 
 /* Typing effect keyframes */
@@ -525,75 +518,91 @@ background-color: #252424c9;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.712);
 }
 
-.footer-container {
-  max-width: 1170px;
-  display: flex; /* Flexbox layout */
-  justify-content: space-between; /* Space between the divs */
-  align-items: center; /* Align vertically to the center */
-  padding: 10px;
-  margin-top: 100px;
-}
-
 .footer {
-  margin-top: 100px;
-  background-color: #1212139c;
-  padding: 2px 0;
+  background-color: #181818; /* Dark background for footer */
+  color: #fff; /* White text color */
+  padding: 40px 20px; /* Padding for footer */
+  text-align: center; /* Center text */
 }
 
+/* Footer container styling */
+.footer-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items */
+  gap: 20px; /* Space between items */
+  margin-top: 20px; /* Space above container */
+}
+
+/* Address styling */
 .footer-address {
-  margin-left: 30%;
+  text-align: left; /* Align text to the left */
+  width: 100%; /* Full width */
 }
 
-.footer-address h1{
-    color: #3a3d3c;
-}
-.footer-address p{
-    color: #6b706e;
-}
-
-
-
+/* Form styling */
 .footer-form {
-  margin-right: 10%;
+  width: 100%; /* Full width for the form */
+  max-width: 400px; /* Limit max width */
+}
+.footer-form input,
+.footer-form button {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px; /* Padding for inputs */
+    margin-bottom: 10px; /* Space below inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners */
 }
 
-.footer-form input {
-  width: 240px;
-  height: 30px;
-  margin: 5px;
-  padding: 0%;
-  background-color: #0b0b0c;
-  border: #7a431e solid 1px;
-  font-weight: 200;
-  font-family: "Font Awesome 5 Brands";
-  color: #636d66;
-  font-size: 20px;
-  border-right-color: #0b0b0c;
-  border-top-color: #0b0b0c;
-  border-left-color: #0b0b0c;
-  
+/* Button styling */
+.footer-form-button {
+    background-color: #1588fc; /* Button color */
+    color: #fff; /* Button text color */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition for button */
 }
 
+/* Button hover effect */
+.footer-form-button:hover {
+    background-color: #0a6cb1; /* Darker shade on hover */
+}
 
+/* Social links styling */
+.footer-social h4 {
+    color: #484863; /* Color for subheading */
+    text-align: center; /* Center text */
+}
+
+.social-links {
+    text-align: center; /* Center social links */
+}
 
 .footer-social .social-links a {
-    
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  background-color: rgb(0, 0, 0);
-  margin: 0 10px 10px 0;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 50%;
-  color: #ffffff;
-  transition: all 0.5s ease;
+    display: inline-block; /* Inline block for layout */
+    height: 40px; /* Height of icons */
+    width: 40px; /* Width of icons */
+    background-color: rgb(0, 0, 0); /* Background color for icons */
+    margin: 0 10px 10px 0; /* Margin around icons */
+    text-align: center; /* Center icon */
+    line-height: 40px; /* Center text vertically */
+    border-radius: 50%; /* Rounded icons */
+    color: #ffffff; /* Icon color */
+    transition: all 0.5s ease; /* Smooth transition */
 }
-.social-links a:hover {
 
-  color: #050505c9;
-  background-color: rgba(31, 68, 83, 0.863);
+.social-links a:hover {
+    color: #050505c9; /* Color on hover */
+    background-color: rgba(31, 68, 83, 0.863); /* Background color on hover */
 }
+
+/* Credit styling */
+.credit {
+    text-align: center; /* Center the text */
+    margin: 20px 0; /* Add vertical margin for spacing */
+    filter: brightness(0.2); /* Maintain brightness filter */
+    font-size: 18px; /* Base font size */
+}
+
 
 /*responsive*/
 @media (max-width: 767px) {
@@ -660,3 +669,192 @@ background-color: #252424c9;
   }
 
 
+/* Media query */
+/* navigation */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column; /* Stack logo and links vertically */
+    padding: 20px;
+  }
+
+  .logo {
+    margin-bottom: 15px; /* Add space between logo and nav links */
+    font-size: 24px; /* Adjust font size */
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the links */
+  }
+
+  .nav-links a {
+    margin: 5px 0; /* Stack the links with vertical margin */
+    padding: 8px 20px; /* Increase padding for better touch support */
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  header nav {
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 20px; /* Reduce the font size for smaller screens */
+  }
+
+  .nav-links a {
+    margin: 5px 0;
+    padding: 10px 20px; /* More touch-friendly for small screens */
+    font-size: 14px; /* Reduce link text size */
+  }
+}
+
+
+/* profile section */
+@media (max-width: 768px) {
+  .profile {
+    padding: 100px 0;
+  }
+
+  .img-class {
+    height: 120px;
+    width: 120px;
+  }
+
+  .typewriter {
+    font-size: 30px; /* Adjust the font size */
+  }
+
+  p {
+    font-size: 16px; /* Slightly reduce text size */
+  }
+
+  .my-buttons {
+    font-size: 16px;
+    padding: 8px 20px; /* Adjust button padding */
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .profile {
+    padding: 80px 0;
+  }
+
+  .img-class {
+    height: 100px;
+    width: 100px;
+  }
+
+  .typewriter {
+    font-size: 24px; /* Further reduce the font size */
+  }
+
+  p {
+    font-size: 14px; /* Make paragraph text smaller */
+  }
+
+  .my-buttons {
+    font-size: 14px;
+    padding: 6px 15px; /* Smaller padding for mobile buttons */
+  }
+}
+
+
+/* About section */
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+
+  .about-image img {
+    width: 100%; /* Make the image 100% width on mobile */
+    height: auto;
+  }
+
+  .about-details ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .about-span-1,
+  .about-span-2 {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  hr {
+    width: 50%; /* Make the horizontal line full width on mobile */
+  }
+}
+
+
+/* Resume */
+
+@media (max-width: 768px) {
+  .resume-container {
+    grid-template-columns: 1fr; /* Single column layout on small screens */
+    margin: 50px 20px; /* Reduced side margins */
+  }
+
+  .resume-item {
+    margin-bottom: 20px; /* Extra space between items */
+  }
+}
+
+/* Experiece */
+
+@media (max-width: 768px) {
+  .timeline-container {
+    width: 90%; /* Full width on mobile */
+    margin: 50px auto; /* Adjust margins */
+  }
+}
+
+
+/* skills */
+
+@media (max-width: 768px) {
+  .skill-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-container {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+}
+
+
+/* footer */
+
+
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column; /* Stack elements vertically on small screens */
+      align-items: center; /* Center elements */
+  }
+  .footer-address {
+      text-align: center; /* Center address on smaller screens */
+  }
+  .footer-form {
+      width: 90%; /* Make form responsive */
+  }
+  .credit {
+      font-size: 16px; /* Smaller font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .credit {
+      font-size: 14px; /* Further reduce font size on very small screens */
+  }
+  .footer-form input,
+  .footer-form button {
+      padding: 8px; /* Smaller padding on smaller screens */
+  }
+}
