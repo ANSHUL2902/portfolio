@@ -760,6 +760,21 @@ object-fit: fill; /* Ensure the image covers the entire area */
      margin-left: 63px;
     }
   }
+  @media (max-width: 450px) {
+    .about-image {
+      width: 90%; /* Adjust width for smaller screens */
+      max-width: 300px; /* Limit the max width for better fit */
+      margin-left: 0; /* Remove left margin */
+      margin-bottom: 20px; /* Keep bottom margin for gap */
+    }
+  
+    .about-details {
+      padding: 0 20px; /* Maintain padding for smaller screens */
+     margin-left: 63px;
+    }
+  }
+
+
   @media (max-width: 500px) {
     .about-me{
       margin-top: 15px;
