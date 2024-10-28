@@ -950,7 +950,7 @@ object-fit: fill; /* Ensure the image covers the entire area */
     gap: 50px;
   }
 }
-@media (max-width: 424px) {
+@media (max-width: 500px) {
   .footer-container {
     margin-left: 0;
     grid-template-columns: repeat(1, 1fr);
