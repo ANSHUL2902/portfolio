@@ -2,9 +2,9 @@ html {
   scroll-behavior: smooth;
 }
 body {
-color: white;
-background-color: #080808;
-font-family: Arial, sans-serif;
+  color: white;
+  background-color: #080808;
+  font-family: Arial, sans-serif;
 }
 
 * {
@@ -14,7 +14,7 @@ font-family: Arial, sans-serif;
 }
 
 /* Next time change it */
-.intro{
+.intro {
   margin-top: 22px;
 }
 
@@ -30,23 +30,21 @@ font-family: Arial, sans-serif;
 }
 
 .nav-title {
-    text-align: center; 
-    font-size: 48px;
- margin-top: 40px;
+  text-align: center;
+  font-size: 48px;
+  margin-top: 40px;
 }
 
-.underline-container{
-display: flex;
-justify-content: center;
-margin-top: 50px;
+.underline-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
-.underline{
+.underline {
   width: 400px;
   height: 0px;
   border: 1px solid #f60000ed;
-
 }
-
 
 #home,
 #about,
@@ -55,7 +53,7 @@ margin-top: 50px;
 #Experience,
 #project,
 #contact {
-  scroll-margin-top:170px;
+  scroll-margin-top: 170px;
 }
 
 :root {
@@ -64,63 +62,83 @@ margin-top: 50px;
 /* Navigation */
 /* Logo */
 .logo {
-  color: #000000c4;
+  color: #000000;
   font-size: 27px;
   font-weight: 1000;
   font-variant: all-small-caps;
   margin-right: 20px;
-font-size: 27px;
-font-weight: 1000;
-font-variant: all-small-caps;
 }
+
 .logo:hover {
-  color: #7c131386;
+  color: #0059ff86;
   cursor: pointer;
 }
+
+/* Navigation Links */
 .nav-links {
-  margin-left: 350px;
+  margin-left: 620px;
   display: flex;
-  justify-content: center;
   flex-grow: 1;
 }
+
+/* Each link styling */
 .nav-links a {
-  margin: 0 10px;
-  padding: 6px 15px;
-  color: #757567;
-  border: 1px solid #7a431e;
-  border-radius: 24px;
+  margin: 11px;
+  color: #994c19;
   text-decoration: none;
+  position: relative; /* To position the underline */
 }
 
-  .nav-links a:hover {
-    color: #7a431e;
-    border-color: #7a431e;
-  }
-  header nav {
-    min-height: 20px;
-    z-index: 9999;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    height: 13px;
-    background-color: rgba(42, 43, 44, 0.788);
-    padding: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(10px);
-  }
+.nav-links a::after {
+  content: ''; /* Creates the underline */
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Distance from the text */
+  width: 100%;
+  height: 1px; /* Thickness of the underline */
+  background-color: #994c19; /* Same color as the text */
+  transform: scaleX(0); /* Initially hidden */
+  transform-origin: right; /* Start animation from the right */
+  
+  transition: transform 0.3s ease; /* Smooth animation */
+}
 
-  .hamburger {
-    display: none; /* Hide the button by default */
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem; /* Adjust size */
-    cursor: pointer;
-  }
+/* Hover effect to reveal underline */
+.nav-links a:hover::after {
+  transform: scaleX(1); /* Show the underline on hover */
+  transform-origin: left; /* Animate from left to right */
+}
 
+/* Header Styling */
+header nav {
+  min-height: 20px;
+  z-index: 9999;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 13px;
+  background-color: rgba(42, 43, 44, 0.788);
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Hamburger menu (hidden by default) */
+.hamburger {
+  display: none; /* Hide the button by default */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-links a:hover {
+  color: #ec7d3d;
+}
 
 /* Hero */
 .hero-container {
@@ -145,7 +163,8 @@ font-variant: all-small-caps;
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -186,7 +205,8 @@ font-variant: all-small-caps;
 
 /* Blinking cursor effect */
 @keyframes blink {
-  from, to {
+  from,
+  to {
     border-color: transparent;
   }
   50% {
@@ -196,7 +216,7 @@ font-variant: all-small-caps;
 
 /* Aabout */
 .about-container {
-margin-top: 55px;
+  margin-top: 55px;
   display: flex;
   flex-direction: column; /* Stack items on smaller screens */
   align-items: center; /* Center items horizontally */
@@ -210,25 +230,23 @@ margin-top: 55px;
   width: 90%; /* Make it responsive */
   max-width: 400px; /* Limit to a max width */
   height: auto; /* Auto height for responsiveness */
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .about-image img {
   width: 100%;
   height: auto; /* Allow the height to adjust automatically */
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 .about-details {
- 
   margin-top: 0; /* Reset margin-top */
   font-variant: all-small-caps;
   padding: 0 20px; /* Padding for smaller screens */
-
 }
 
 .about-details li {
-  list-style-type:circle;
+  list-style-type: circle;
   color: #1b1a1a;
   margin: 15px 0; /* Adjusted margin */
   font-size: 22px;
@@ -236,43 +254,39 @@ margin-top: 55px;
 }
 
 .about-details li:hover {
-  margin-left: 2px; 
-  color: #fa000069;  
-  list-style-type:disc;
+  margin-left: 2px;
+  color: #fa000069;
+  list-style-type: disc;
 }
 
 .about-span-1 {
   color: gray;
-  
 }
 
 .about-span-2 {
   color: rgb(199, 198, 198);
 }
 
-.about-me{
+.about-me {
   margin-top: 30px;
   margin-left: 20%;
- text-align: center;
- width: 800px;
+  text-align: center;
+  width: 800px;
   font-size: 17px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: rgb(207, 207, 207);
   line-height: 28px;
   word-spacing: 2px;
 }
 
-.about-me strong{
+.about-me strong {
   color: rgb(6, 101, 209);
-  
 }
 
-
-
 /* Resume */
- 
-.resume-container {
 
+.resume-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 70px;
@@ -286,7 +300,7 @@ margin-top: 55px;
   padding: 10px;
   border-radius: 15px;
   border: solid black;
-  background-color: #1a1a1a;
+  background-color: #1d1c1c;
 }
 
 .resume-item h2 {
@@ -308,9 +322,9 @@ margin-top: 55px;
 .timeline-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-background-color: #252424c9;
+  background-color: #1d1c1c;
   position: relative;
- padding: 20px;
+  padding: 20px;
   margin: 0 auto;
   margin-top: 100px;
   padding: 40px 0;
@@ -321,7 +335,7 @@ background-color: #252424c9;
 
 /* Vertical line in the center */
 .timeline-container::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 40px; /* Place the line on the left side */
   top: 0;
@@ -350,8 +364,7 @@ background-color: #252424c9;
   height: 20px;
   border-radius: 50%;
   z-index: 1;
-  border: 1px solid   rgb(8, 8, 8);
-
+  border: 1px solid rgb(8, 8, 8);
 }
 
 /* Content box for each experience (on the right side of the line) */
@@ -384,7 +397,7 @@ background-color: #252424c9;
 /* The description of the experience */
 .timeline-description {
   margin-top: 10px;
-  color: #727272;;
+  color: #727272;
   font-size: 1em;
 }
 
@@ -458,22 +471,18 @@ background-color: #252424c9;
   color: 1588fc;
 }
 
-
-
-.skill-list img{
-    margin-top: 30px;
-    width: 40px;
-
+.skill-list img {
+  margin-top: 30px;
+  width: 40px;
 }
 
-
 /* Project */
-.project-title{
+.project-title {
   text-align: center;
-    font-size: 20px;
-    margin-top: 100px;
-    color: #f9fbff;
-    font-family: auto;
+  font-size: 20px;
+  margin-top: 100px;
+  color: #f9fbff;
+  font-family: auto;
 }
 
 .project-description {
@@ -486,18 +495,117 @@ background-color: #252424c9;
 
 .project-images {
   height: 600px;
-margin-top: -50px;
-display: flex;
-justify-content: center;
-align-items: center;
-overflow: hidden;
+  margin-top: -50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 #slideshow-image {
-width: 50%;
-height: 50%;
-object-fit: fill; /* Ensure the image covers the entire area */
+  width: 50%;
+  height: 50%;
+  object-fit: fill; /* Ensure the image covers the entire area */
 }
+
+/* services */
+
+.services-container {
+margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-grid-container {
+
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex-direction: column;
+  gap: 50px;
+}
+
+.services-grid {
+  color: #f0a400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 180px;
+  width: 350px;
+  background-color: rgb(29, 28, 28);
+  border: 1px solid #333;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 2;
+  overflow: hidden  ;
+}
+
+.service-hr-line {
+  margin-top: 15px;
+  width: 100px; /* Total width of the line */
+  height: 2px; /* Height of the line */
+  background-color: rgb(207, 207, 209); /* Start with no color */
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-hr-line::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 0; /* Start width at 0 */
+  height: 100%;
+  background-color: rgb(255, 0, 0); /* Line color */
+  transform: translateX(-50%); /* Center the line */
+  transition: width 0.4s ease; /* Smooth transition on width change */
+}
+
+.services-grid:hover .service-hr-line::before {
+
+  width: 100%; /* Expand the line fully on hover */
+ 
+}
+
+.services-grid::before{
+  content: '';
+  background-color: #121213;
+  top: 0;
+  left: 0;
+width: 100%;
+height: 100%;
+  position: absolute;
+  transform: translateX(-100%);
+  transition: .4s all ease;
+  z-index: -1;
+}
+.services-grid::after{
+  content: '';
+  background-color: #121213;
+  top: 0;
+  right: 0;
+width: 100%;
+height: 100%;
+  position: absolute;
+  transform: translateX(100%);
+  transition: .4s all ease;
+  z-index: -1;
+}
+.services-grid:hover::before{
+transform: translate(-50%);
+}
+.services-grid:hover::after{
+  transform: translate(50%);
+  }
+
+
+
+
+
 
 /* footer */
 
@@ -507,7 +615,6 @@ object-fit: fill; /* Ensure the image covers the entire area */
   grid-template-columns: 1fr;
   gap: 20px;
   padding: 20px;
-  
 }
 
 .footer {
@@ -518,7 +625,7 @@ object-fit: fill; /* Ensure the image covers the entire area */
 
 .footer-address {
   line-height: 2;
-  font-family: 'Font Awesome 5 Brands', system-ui;
+  font-family: "Font Awesome 5 Brands", system-ui;
 }
 
 .footer-address h1 {
@@ -537,7 +644,7 @@ object-fit: fill; /* Ensure the image covers the entire area */
 .footer-form textarea {
   width: 70%;
   margin: 10px 0;
-  
+
   background-color: transparent; /* Transparent background */
   border: none; /* Remove all borders */
   border-bottom: 1px solid #7a431e; /* Only bottom border */
@@ -552,8 +659,7 @@ object-fit: fill; /* Ensure the image covers the entire area */
   border-bottom-color: #0066ff; /* Change this color as desired on focus */
 }
 
-.footer-form-button{
-
+.footer-form-button {
   color: #757567;
   margin-top: 15px;
   margin-left: 77px;
@@ -564,9 +670,7 @@ object-fit: fill; /* Ensure the image covers the entire area */
   border-radius: 15px;
 }
 .footer-form-button:hover {
-
   color: #7a431e;
-
 
   width: 140px;
   height: 31px;
@@ -575,10 +679,7 @@ object-fit: fill; /* Ensure the image covers the entire area */
   border-radius: 15px;
 }
 
-
-
 .footer-social .social-links a {
-
   display: inline-block;
   height: 40px;
   width: 40px;
@@ -591,7 +692,6 @@ object-fit: fill; /* Ensure the image covers the entire area */
   transition: all 0.5s ease;
 }
 .social-links a:hover {
-
   color: #050505c9;
   background-color: rgba(31, 68, 83, 0.863);
 }
@@ -611,18 +711,13 @@ object-fit: fill; /* Ensure the image covers the entire area */
   font-size: 24px;
 }
 
-
-
-
-.credit{
+.credit {
   margin-left: 1181px;
   filter: brightness(0.2);
   font-size: 18px;
 }
 
-
-
-  /* Responsive styles */
+/* Responsive styles */
 
 /* Headings */
 @media (max-width: 768px) {
@@ -658,161 +753,154 @@ object-fit: fill; /* Ensure the image covers the entire area */
   }
 
   .nav-title {
-    font-size: 48px; 
-    margin-top: 40px; 
+    font-size: 48px;
+    margin-top: 40px;
   }
 }
 
 /*  Underline */
-  @media (max-width: 500px) {
-    .underline-container{
-      display: flex;
-      justify-content: center;
-      margin-top: 26px;
-      }
-      .underline{
-        width: 160px;
-        height: 0px;
-        border: 1px solid #f60000ed;
-      
-      }
-    }
- 
-
-  /* navigation */
-
-  @media (max-width: 768px) {
-    .hamburger {
-      display: block; /* Show the button on smaller screens */
-    }
-  
-    .nav-links {
-      display: none; /* Hide nav links by default on small screens */
-      flex-direction: column; /* Stack links vertically */
-      position: absolute; /* Position them absolutely */
-      top: var(--navbar-height); /* Position below the navbar */
-      left: 0;
-      right: 0;
-      background-color: rgba(42, 43, 44, 0.788);
-      padding: 10px 0; /* Add padding around the links */
-      z-index: 999; /* Ensure it's above other content */
-    }
-  
-    .nav-links.active {
-      display: flex; /* Show nav links when active */
-    }
-  
-    .nav-links a {
-      margin: 5px 0; /* Space between links */
-      text-align: center; /* Center text */
-    }
+@media (max-width: 500px) {
+  .underline-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 26px;
   }
-  
-  
-  @media (max-width: 480px) {
-    .nav-links {
-      left: 0; /* Align left */
-      right: 0; /* Align right */
-    }
+  .underline {
+    width: 160px;
+    height: 0px;
+    border: 1px solid #f60000ed;
+  }
+}
+
+/* navigation */
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show the button on smaller screens */
   }
 
-  @media (max-width: 768px) {
-    .typewriter {
-      font-size: 1.5rem; /* Smaller font size on mobile */
-    }
-  
-    .img-class {
-      height: 120px; /* Smaller profile picture */
-      width: 120px; /* Smaller profile picture */
-    }
+  .nav-links {
+    display: none; /* Hide nav links by default on small screens */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute; /* Position them absolutely */
+    top: var(--navbar-height); /* Position below the navbar */
+    left: 0;
+    right: 0;
+    background-color: rgba(42, 43, 44, 0.788);
+    padding: 10px 0; /* Add padding around the links */
+    z-index: 999; /* Ensure it's above other content */
   }
 
-  /* About */
-  @media (min-width: 768px) {
-    .about-container {
-      flex-direction: row; /* Switch to row layout on larger screens */
-      align-items: flex-start; /* Align items to the top */
-      margin-left: 50px; /* Add left margin for desktop view */
-    }
-    
-    .about-image {
-      margin-bottom: 0; /* Remove bottom margin on larger screens */
-      margin-right: 50px; /* Margin for larger screens */
-    }
-    
-    .about-details {
-      padding-right: 50px; /* Adjust right padding */
-      margin-top: 0; /* Remove margin on larger screens */
+  .nav-links.active {
+    display: flex; /* Show nav links when active */
+  }
 
-    }
-    .about-details li {
-      list-style-type:circle;
-      color: #1b1a1a;
-      margin: 15px 0; /* Adjusted margin */
-      font-size: 22px;
-      transition: color 0.3s, margin-left 0.3s; /* Smooth transition */
-    }
+  .nav-links a {
+    margin: 5px 0; /* Space between links */
+    text-align: center; /* Center text */
   }
-  
-  @media (max-width: 900px) {
-    .about-image {
-      width: 90%; /* Adjust width for smaller screens */
-      max-width: 300px; /* Limit the max width for better fit */
-      margin-left: 0; /* Remove left margin */
-      margin-bottom: 20px; /* Keep bottom margin for gap */
-    }
-  
-    .about-details {
-      padding: 0 20px; /* Maintain padding for smaller screens */
-     margin-left: 63px;
-    }
-    .about-details li {
-      list-style-type:circle;
-      color: #1b1a1a;
-      margin: 15px 0; /* Adjusted margin */
-      font-size: 22px;
-      transition: color 0.3s, margin-left 0.3s; /* Smooth transition */
-    }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    left: 0; /* Align left */
+    right: 0; /* Align right */
   }
-  @media (max-width: 500px) {
-    .about-me{
-      margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .typewriter {
+    font-size: 1.5rem; /* Smaller font size on mobile */
+  }
+
+  .img-class {
+    height: 120px; /* Smaller profile picture */
+    width: 120px; /* Smaller profile picture */
+  }
+}
+
+/* About */
+@media (min-width: 768px) {
+  .about-container {
+    flex-direction: row; /* Switch to row layout on larger screens */
+    align-items: flex-start; /* Align items to the top */
+    margin-left: 50px; /* Add left margin for desktop view */
+  }
+
+  .about-image {
+    margin-bottom: 0; /* Remove bottom margin on larger screens */
+    margin-right: 50px; /* Margin for larger screens */
+  }
+
+  .about-details {
+    padding-right: 50px; /* Adjust right padding */
+    margin-top: 0; /* Remove margin on larger screens */
+  }
+  .about-details li {
+    list-style-type: circle;
+    color: #1b1a1a;
+    margin: 15px 0; /* Adjusted margin */
+    font-size: 22px;
+    transition: color 0.3s, margin-left 0.3s; /* Smooth transition */
+  }
+}
+
+@media (max-width: 900px) {
+  .about-image {
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: 300px; /* Limit the max width for better fit */
+    margin-left: 0; /* Remove left margin */
+    margin-bottom: 20px; /* Keep bottom margin for gap */
+  }
+
+  .about-details {
+    padding: 0 20px; /* Maintain padding for smaller screens */
+    margin-left: 63px;
+  }
+  .about-details li {
+    list-style-type: circle;
+    color: #1b1a1a;
+    margin: 15px 0; /* Adjusted margin */
+    font-size: 22px;
+    transition: color 0.3s, margin-left 0.3s; /* Smooth transition */
+  }
+}
+@media (max-width: 500px) {
+  .about-me {
+    margin-top: 15px;
     margin-left: 15px;
-     text-align: center;
-     width: 90%;
-      font-size: 10px;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      color: rgb(207, 207, 207);
-      line-height: 14px;
-      
-    }
-    
-    .about-me strong{
-      color: rgb(6, 101, 209);
-      
-    }
-    .about-details li {
-      list-style-type:circle;
-      color: #1b1a1a;
-      margin: 15px 0; /* Adjusted margin */
-      font-size: 16px;
-      transition: color 0.3s, margin-left 0.3s; /* Smooth transition */
-    }
-    
+    text-align: center;
+    width: 90%;
+    font-size: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    color: rgb(207, 207, 207);
+    line-height: 14px;
   }
 
-
-  /* Resume */
- 
-  @media (max-width: 768px) {
-    .resume-container {
-
-      padding: 0 20px; /* Add padding for mobile devices */
-      grid-template-columns: repeat(1, 1fr);
-    }
+  .about-me strong {
+    color: rgb(6, 101, 209);
   }
+  .about-details li {
+    list-style-type: circle;
+    color: #1b1a1a;
+    margin: 15px 0; /* Adjusted margin */
+    font-size: 16px;
+    transition: color 0.3s, margin-left 0.3s; /* Smooth transition */
+  }
+}
 
-  /* Experience */
+/* Resume */
+
+@media (max-width: 768px) {
+  .resume-container {
+    padding: 0 20px; /* Add padding for mobile devices */
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Experience */
 
 @media (max-width: 768px) {
   .timeline-container::before {
@@ -939,7 +1027,7 @@ object-fit: fill; /* Ensure the image covers the entire area */
 .skill-list {
   display: flex;
   gap: 1rem;
-  
+
   padding-block: 10px;
   flex-wrap: nowrap; /* Prevent wrapping so that items scroll horizontally */
   animation: scroll 8s linear infinite;
@@ -963,6 +1051,67 @@ object-fit: fill; /* Ensure the image covers the entire area */
   }
 }
 
+/* services */
+@media (max-width: 992px) {
+  .services-grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
+    gap: 30px; /* Reduce gap between items */
+  }
+
+  .services-grid {
+    height: 160px;
+    width: 300px; /* Smaller width */
+  }
+
+  .service-hr-line {
+    width: 80px; /* Smaller line width */
+  }
+
+  .services-container {
+    padding: 15px; /* Adjust padding for medium screens */
+  }
+}
+
+/* For Mobile Phones */
+@media (max-width: 768px) {
+  .services-grid-container {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 20px; /* Reduce gap between items */
+  }
+
+  .services-grid {
+    height: 150px;
+    width: 100%; /* Full-width on mobile */
+    font-size: 1.2rem; /* Adjust font size */
+  }
+
+  .service-hr-line {
+    width: 60px; /* Smaller line width */
+  }
+
+  .services-container {
+    padding: 10px; /* Adjust padding for small screens */
+  }
+}
+
+/* For Extra Small Mobile Devices */
+@media (max-width: 576px) {
+  .services-grid {
+    height: 140px;
+    width: 100%; /* Ensure full width */
+    font-size: 1rem; /* Smaller font size */
+  }
+
+  .service-hr-line {
+    width: 50px; /* Narrower line width */
+  }
+
+  .services-container {
+    padding: 5px; /* Reduce padding for very small screens */
+  }
+}
+
+
 /* footer */
 @media (min-width: 768px) {
   .footer-container {
@@ -982,20 +1131,17 @@ object-fit: fill; /* Ensure the image covers the entire area */
   .footer-form {
     margin-left: 25%;
   }
-  .footer-address{
+  .footer-address {
     margin-left: 60px;
   }
-  .footer-form-button{
+  .footer-form-button {
     margin-left: 27px;
     width: 50pxpx;
     height: 20px;
-   
+
     border-radius: 15px;
   }
-
 }
-
-
 
 /* Responsive styles for extra large devices (up to 1200px) */
 @media (max-width: 450px) {
@@ -1013,8 +1159,6 @@ object-fit: fill; /* Ensure the image covers the entire area */
   }
 }
 
-
-
 /* enhance scrolling */
 .fade-in {
   opacity: 0;
@@ -1026,9 +1170,6 @@ object-fit: fill; /* Ensure the image covers the entire area */
   opacity: 1;
   transform: translateY(0);
 }
-
-
-
 
 .scroller[data-animation="true"] {
   overflow: hidden;
