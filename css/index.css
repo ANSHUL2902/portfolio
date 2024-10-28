@@ -20,7 +20,7 @@ font-family: Arial, sans-serif;
 
 /* Headings */
 .home-title {
-  margin-top: 30px;
+  margin-top: 60px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 900;
   font-size: 90px;
@@ -33,6 +33,18 @@ font-family: Arial, sans-serif;
     text-align: center; 
     font-size: 48px;
  margin-top: 40px;
+}
+
+.underline-container{
+display: flex;
+justify-content: center;
+margin-top: 50px;
+}
+.underline{
+  width: 400px;
+  height: 0px;
+  border: 1px solid #f60000ed;
+
 }
 
 
@@ -208,13 +220,15 @@ margin-top: 55px;
 }
 
 .about-details {
+ 
   margin-top: 0; /* Reset margin-top */
   font-variant: all-small-caps;
   padding: 0 20px; /* Padding for smaller screens */
-  text-align: center; /* Center the text */
+
 }
 
 .about-details li {
+  list-style-type:circle;
   color: #1b1a1a;
   margin: 15px 0; /* Adjusted margin */
   font-size: 22px;
@@ -222,17 +236,38 @@ margin-top: 55px;
 }
 
 .about-details li:hover {
-  margin-left: 5px; /* Slight increase for better effect */
+  margin-left: 2px; 
   color: #fa000069;  
+  list-style-type:disc;
 }
 
 .about-span-1 {
-  color: white;
+  color: gray;
+  
 }
 
 .about-span-2 {
-  color: gray;
+  color: rgb(199, 198, 198);
 }
+
+.about-me{
+  margin-top: 30px;
+  margin-left: 20%;
+ text-align: center;
+ width: 800px;
+  font-size: 17px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(207, 207, 207);
+  line-height: 28px;
+  word-spacing: 2px;
+}
+
+.about-me strong{
+  color: rgb(6, 101, 209);
+  
+}
+
+
 
 /* Resume */
  
@@ -328,6 +363,7 @@ background-color: #252424c9;
   z-index: 1;
   margin-left: 53px;
   width: 57%;
+  margin-top: 11px;
 }
 
 /* The company name */
@@ -466,6 +502,7 @@ object-fit: fill; /* Ensure the image covers the entire area */
 /* footer */
 
 .footer-container {
+  margin-left: 200px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
@@ -482,7 +519,6 @@ object-fit: fill; /* Ensure the image covers the entire area */
 .footer-address {
   line-height: 2;
   font-family: 'Font Awesome 5 Brands', system-ui;
-  margin-left: 230px;
 }
 
 .footer-address h1 {
@@ -627,9 +663,24 @@ object-fit: fill; /* Ensure the image covers the entire area */
   }
 }
 
-
+/*  Underline */
+  @media (max-width: 500px) {
+    .underline-container{
+      display: flex;
+      justify-content: center;
+      margin-top: 26px;
+      }
+      .underline{
+        width: 160px;
+        height: 0px;
+        border: 1px solid #f60000ed;
+      
+      }
+    }
+ 
 
   /* navigation */
+
   @media (max-width: 768px) {
     .hamburger {
       display: block; /* Show the button on smaller screens */
@@ -656,6 +707,7 @@ object-fit: fill; /* Ensure the image covers the entire area */
       text-align: center; /* Center text */
     }
   }
+  
   
   @media (max-width: 480px) {
     .nav-links {
@@ -691,6 +743,7 @@ object-fit: fill; /* Ensure the image covers the entire area */
     .about-details {
       padding-right: 50px; /* Adjust right padding */
       margin-top: 0; /* Remove margin on larger screens */
+
     }
   }
   
@@ -704,8 +757,27 @@ object-fit: fill; /* Ensure the image covers the entire area */
   
     .about-details {
       padding: 0 20px; /* Maintain padding for smaller screens */
-      text-align: center; /* Center text on smaller screens */
+     margin-left: 63px;
     }
+  }
+  @media (max-width: 500px) {
+    .about-me{
+      margin-top: 15px;
+    margin-left: 15px;
+     text-align: center;
+     width: 90%;
+      font-size: 10px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: rgb(207, 207, 207);
+      line-height: 14px;
+      
+    }
+    
+    .about-me strong{
+      color: rgb(6, 101, 209);
+      
+    }
+    
   }
 
 
@@ -723,7 +795,7 @@ object-fit: fill; /* Ensure the image covers the entire area */
 
 @media (max-width: 768px) {
   .timeline-container::before {
-    left: 5px;
+    left: 18px;
   }
 
   .timeline-item {
@@ -732,13 +804,13 @@ object-fit: fill; /* Ensure the image covers the entire area */
   }
 
   .timeline-dot {
-    left: 0;
+    left: 10px;
     top: 0;
   }
 
   .timeline-content {
-    margin-top: -40px;
-    margin-left: 20px;
+    margin-top: -45px;
+    margin-left: 30px;
     width: 70%; /* Full width on smaller screens */
   }
 }
@@ -878,65 +950,44 @@ object-fit: fill; /* Ensure the image covers the entire area */
     gap: 50px;
   }
 }
-
-@media (min-width: 768px) {
-  .footer-form {
+@media (max-width: 424px) {
+  .footer-container {
     margin-left: 0;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 50px;
+    gap: 50px;
+  }
+
+  .footer-form {
+    margin-left: 25%;
   }
   .footer-address{
-    margin-left: 0;
+    margin-left: 60px;
   }
-}
-@media (min-width: 100px) {
-  .footer-form {
-    margin-left: 0;
-  }
-  .footer-address{
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 576px) {
-  .credit {
-    margin-left: 10px; /* Smaller margin */
-    filter: brightness(0.5); /* Slightly brighter */
-    font-size: 12px; /* Smaller font size */
+  .footer-form-button{
+    margin-left: 27px;
+    width: 50pxpx;
+    height: 20px;
+   
+    border-radius: 15px;
   }
 }
 
-/* Responsive styles for medium devices (up to 768px) */
-@media (max-width: 768px) {
-  .credit {
-    margin-left: 100px; /* Medium margin */
-    filter: brightness(0.3); /* More brightness adjustment */
-    font-size: 14px; /* Slightly smaller font size */
-  }
-}
 
-/* Responsive styles for large devices (up to 992px) */
-@media (max-width: 992px) {
-  .credit {
-    margin-left: 150px; /* Adjust margin for larger tablets */
-    filter: brightness(0.4); /* Adjust brightness */
-    font-size: 15px; /* Adjust font size */
-  }
-}
 
 /* Responsive styles for extra large devices (up to 1200px) */
-@media (max-width: 1200px) {
+@media (max-width: 450px) {
   .credit {
-    margin-left: 200px; /* Use your original margin */
+    margin-left: 380px; /* Use your original margin */
     filter: brightness(0.2); /* Original brightness */
-    font-size: 16px; /* Return to default font size */
+    font-size: 7px; /* Return to default font size */
   }
 }
-
-/* Styles for larger screens */
-@media (min-width: 1201px) {
+@media (max-width: 1000px) {
   .credit {
-    margin-left: 250px; /* Larger margin for bigger screens */
-    filter: brightness(1); /* Normal brightness */
-    font-size: 18px; /* Larger font size */
+    margin-left: 380px; /* Use your original margin */
+    filter: brightness(0.2); /* Original brightness */
+    font-size: 7px; /* Return to default font size */
   }
 }
 
