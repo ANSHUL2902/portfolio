@@ -745,6 +745,13 @@ object-fit: fill; /* Ensure the image covers the entire area */
       margin-top: 0; /* Remove margin on larger screens */
 
     }
+    .about-details li {
+      list-style-type:circle;
+      color: #1b1a1a;
+      margin: 15px 0; /* Adjusted margin */
+      font-size: 22px;
+      transition: color 0.3s, margin-left 0.3s; /* Smooth transition */
+    }
   }
   
   @media (max-width: 900px) {
@@ -759,22 +766,14 @@ object-fit: fill; /* Ensure the image covers the entire area */
       padding: 0 20px; /* Maintain padding for smaller screens */
      margin-left: 63px;
     }
-  }
-  @media (max-width: 450px) {
-    .about-image {
-      width: 90%; /* Adjust width for smaller screens */
-      max-width: 300px; /* Limit the max width for better fit */
-      margin-left: 0; /* Remove left margin */
-      margin-bottom: 20px; /* Keep bottom margin for gap */
-    }
-  
-    .about-details {
-      padding: 0 20px; /* Maintain padding for smaller screens */
-     margin-left: 63px;
+    .about-details li {
+      list-style-type:circle;
+      color: #1b1a1a;
+      margin: 15px 0; /* Adjusted margin */
+      font-size: 22px;
+      transition: color 0.3s, margin-left 0.3s; /* Smooth transition */
     }
   }
-
-
   @media (max-width: 500px) {
     .about-me{
       margin-top: 15px;
@@ -791,6 +790,13 @@ object-fit: fill; /* Ensure the image covers the entire area */
     .about-me strong{
       color: rgb(6, 101, 209);
       
+    }
+    .about-details li {
+      list-style-type:circle;
+      color: #1b1a1a;
+      margin: 15px 0; /* Adjusted margin */
+      font-size: 16px;
+      transition: color 0.3s, margin-left 0.3s; /* Smooth transition */
     }
     
   }
@@ -965,7 +971,7 @@ object-fit: fill; /* Ensure the image covers the entire area */
     gap: 50px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 424px) {
   .footer-container {
     margin-left: 0;
     grid-template-columns: repeat(1, 1fr);
@@ -986,6 +992,7 @@ object-fit: fill; /* Ensure the image covers the entire area */
    
     border-radius: 15px;
   }
+
 }
 
 
