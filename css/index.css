@@ -2,8 +2,9 @@ html {
   scroll-behavior: smooth;
 }
 body {
+
   color: white;
-  background-color: #080808;
+  background-color: #000000;
   font-family: Arial, sans-serif;
 }
 
@@ -29,7 +30,10 @@ body {
   color: #1a1a1a;
   text-align: center;
   margin-bottom: -154px;
+
+
 }
+
 
 .nav-title {
   text-align: center;
@@ -45,7 +49,124 @@ body {
 .underline {
   width: 400px;
   height: 0px;
-  border: 1px solid #f60000ed;
+  border: 1px solid #ff0000;
+}
+
+#home,
+#about,
+#resume,
+#skills,
+#Experience,
+#project,
+#contact {
+  scroll-margin-top: 170px;
+}
+
+:root {
+  --navbar-height: 200px; /* Adjust based on your design */
+}
+/* Navigation */
+/* Logo */
+.logo {
+  color: #000000;
+  font-size: 27px;
+  font-weight: 1000;
+  font-variant: all-small-caps;
+  margin-right: 20px;
+}
+
+.logo:hover {
+  color: #0059ff86;
+  cursor: pointer;
+}
+
+/* Navigation Links */
+.nav-links {
+  margin-left: 620px;
+  display: flex;
+  flex-grow: 1;
+}
+
+/* Each link styling */
+.nav-links a {
+  margin: 11px;
+  color: #994c19;
+  text-decoration: none;
+  position: relative; /* To position the underline */
+}
+
+.nav-links a::after {
+  content: ''; /* Creates the underline */
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Distance from the text */
+  width: 100%;
+  height: 1px; /* Thickness of the underline */
+  background-color: #994c19; /* Same color as the text */
+  transform: scaleX(0); /* Initially hidden */
+  transform-origin: right; /* Start animation from the right */
+  
+  transition: transform 0.3s ease; /* Smooth animation */
+}
+
+/* Hover effect to reveal underline */
+.nav-links a:hover::after {
+  transform: scaleX(1); /* Show the underline on hover */
+  transform-origin: left; /* Animate from left to right */
+}
+
+/* Header Styling */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  color: white;
+  background-color: #000000;
+  font-family: Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Next time change it */
+.intro {
+  margin-top: 22px;
+}
+
+/* Headings */
+.home-title {
+  margin-top: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 90px;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: -154px;
+
+
+}
+
+
+.nav-title {
+  text-align: center;
+  font-size: 48px;
+  margin-top: 40px;
+}
+
+.underline-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.underline {
+  width: 400px;
+  height: 0px;
+  border: 1px solid #ff0000;
 }
 
 #home,
@@ -218,8 +339,99 @@ header nav {
   }
 }
 
+/* Hamburger menu (hidden by default) */
+.hamburger {
+  display: none; /* Hide the button by default */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-links a:hover {
+  color: #ec7d3d;
+}
+
+/* Hero */
+.hero-container {
+  padding-top: 60px; /* Adjusted padding to ensure it clears the nav bar */
+}
+
+/* Profile Section with Background Image */
+.profile {
+  width: 100%;
+  background-image: url("../Assests/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 152px 0; /* Vertical padding inside the hero */
+}
+
+/* Floating Profile Image */
+.img-class {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  animation: float 2s ease-in-out infinite;
+}
+
+/* Float Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Centering the Typewriter Container */
+.typewriter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Typing Effect */
+.typewriter {
+  font-size: 2.25rem; /* Use relative units */
+  color: black;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid black;
+  display: inline-block;
+  animation: typing 2s steps(20, end) forwards, blink 0.75s step-end infinite;
+  animation-fill-mode: forwards; /* Keep the final state of the animation */
+}
+
+/* Typing Effect Keyframes */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 20ch; /* Adjust based on the actual length of text */
+  }
+}
+
+/* Blinking Cursor Effect */
+@keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
 /* Aabout */
 .about-container {
+
   margin-top: 55px;
   display: flex;
   flex-direction: column; /* Stack items on smaller screens */
@@ -238,6 +450,7 @@ header nav {
 }
 
 .about-image img {
+ 
   width: 100%;
   height: auto; /* Allow the height to adjust automatically */
   object-fit: cover;
@@ -326,15 +539,15 @@ header nav {
 .timeline-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  background-color: #1d1c1c;
+  background-color: #070707;
   position: relative;
   padding: 20px;
   margin: 0 auto;
   margin-top: 100px;
   padding: 40px 0;
-  width: 70%;
+  width: 50%;
   max-width: 1200px;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 /* Vertical line in the center */
@@ -345,7 +558,7 @@ header nav {
   top: 0;
   bottom: 0;
   width: 4px;
-  background-color: #3939394d;
+  background-color: #f1070723;
   z-index: 0;
 }
 
@@ -363,21 +576,20 @@ header nav {
   position: absolute;
   left: 30px;
   top: 55px;
-  background-color: #2f493e;
+  background-color: #ff890260;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   z-index: 1;
-  border: 1px solid rgb(8, 8, 8);
+ 
 }
 
 /* Content box for each experience (on the right side of the line) */
 .timeline-content {
-  background-color: #303030;
+  border: 1px solid rgba(243, 243, 243, 0.205);
+  background-color: #161616;
   padding: 20px;
-  border-radius: 25px;
   position: relative;
-  z-index: 1;
   margin-left: 53px;
   width: 57%;
   margin-top: 11px;
@@ -386,14 +598,14 @@ header nav {
 /* The company name */
 .timeline-company {
   margin: 0;
-  color: #1587fa;
+  color: #fa8f15;
   font-weight: bold;
   font-size: 1.2em;
 }
 
 /* The year of experience */
 .timeline-year {
-  color: #888;
+  color: #f08a049a;
   font-size: 0.9em;
   margin-top: 4px;
 }
@@ -401,23 +613,24 @@ header nav {
 /* The description of the experience */
 .timeline-description {
   margin-top: 10px;
-  color: #727272;
+  color: #b1a6a6;
   font-size: 1em;
 }
 
 /* skills */
 
-.skill-container {
+.skill-container { 
+ 
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
   gap: 20px;
-  padding: 20px;
+  padding: 40px;
 }
 .skill-item {
-  border-radius: 25px;
+  border-radius: 10px;
   margin-top: 40px;
-  background-color: #000000;
-  border: 1px solid #ddd5d7;
+  background-color: #0e0d0d;
+  border: 1px solid #a55513fd;
   padding: 20px;
   text-align: center;
   position: relative;
@@ -427,7 +640,7 @@ header nav {
 
 /* Title */
 .skill-title {
-  color: rgb(255, 255, 255);
+  color: rgb(255, 136, 0);
   font-size: 24px;
   font-weight: bold;
   margin: 0;
@@ -454,18 +667,13 @@ header nav {
   max-height: 300px; /* Adjust based on content size */
 }
 
-/* Hover Effect: Change background and text color */
-.skill-item:hover {
-  border: 1px solid #1588fc;
-  background-color: #252726;
-}
 
 .skill-item:hover .skill-title {
-  color: rgb(0, 0, 0);
+  color: rgb(243, 152, 16);
 }
 
 .skill-item:hover .technology-list li {
-  color: #1588fc;
+  color: #f58e089c;
 }
 
 /* Technology List Item */
@@ -1019,67 +1227,7 @@ transform: translate(-50%);
   }
 }
 
-.skill-item {
-  border-radius: 25px;
-  margin-top: 40px;
-  background-color: #000000;
-  border: 1px solid #ddd5d7;
-  padding: 20px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  transition: background-color 0.3s ease;
-}
 
-.skill-title {
-  color: rgb(255, 255, 255);
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0;
-  padding: 10px 0;
-  transition: color 0.3s ease;
-  cursor: pointer;
-}
-
-.technology-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
-  visibility: hidden;
-  max-height: 0;
-  transition: opacity 0.3s ease, max-height 0.3s ease;
-}
-
-.skill-item:hover .technology-list {
-  opacity: 1;
-  visibility: visible;
-  max-height: 300px;
-}
-
-.skill-item:hover {
-  border: 1px solid #1588fc;
-  background-color: #252726;
-}
-
-.skill-item:hover .skill-title {
-  color: rgb(0, 0, 0);
-}
-
-.skill-item:hover .technology-list li {
-  color: #1588fc;
-}
-
-.technology-list li {
-  padding: 10px 0;
-  font-size: 18px;
-  color: #1588fc;
-}
-
-.skill-list img {
-  margin-top: 30px;
-  width: 40px;
-}
 
 /* sliding skills */
 .skill-list {
