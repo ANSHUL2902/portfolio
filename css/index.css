@@ -1253,3 +1253,49 @@ transform: translate(-50%);
   animation-play-state: paused;
   color: #0077ff83;
 }
+
+.diwalibutton {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: linear-gradient(45deg, #ff5e3a, #ffc837); /* Gradient background */
+  border-radius: 50px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Button shadow */
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.diwalibutton:hover {
+  background: linear-gradient(45deg, #ffc837, #ff5e3a); /* Gradient change on hover */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+  transform: translateY(-5px); /* Lift effect */
+}
+
+.diwalibutton::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.75s ease;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+}
+
+.diwalibutton:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Optional: Add hover animation for text */
+.diwalibutton:hover {
+  color: #fff;
+  letter-spacing: 1px;
+}
+
