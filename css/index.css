@@ -1,10 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Swanky+and+Moo+Moo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Swanky+and+Moo+Moo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cinzel:wght@400..900&family=Rubik+Mono+One&display=swap');
+
 html {
+
   scroll-behavior: smooth;
 }
 body {
 
   color: white;
-  background-color: #000000;
+  background: linear-gradient(to right, #010916, #000000);
+  
+  
+ 
+
+
   font-family: Arial, sans-serif;
 }
 
@@ -14,42 +28,6 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-/* Next time change it */
-.intro {
-  margin-top: 22px;
-}
-
-/* Headings */
-.home-title {
-  margin-top: 60px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 900;
-  font-size: 90px;
-  color: #1a1a1a;
-  text-align: center;
-  margin-bottom: -154px;
-
-
-}
-
-
-.nav-title {
-  text-align: center;
-  font-size: 48px;
-  margin-top: 40px;
-}
-
-.underline-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
-.underline {
-  width: 400px;
-  height: 0px;
-  border: 1px solid #ff0000;
 }
 
 #home,
@@ -65,6 +43,54 @@ body {
 :root {
   --navbar-height: 200px; /* Adjust based on your design */
 }
+
+/* Next time change it */
+.intro {
+  margin-top: 10px;
+  color: #7291c2;
+  
+}
+
+/* Headings */
+.home-title {
+  margin-top: 40px;
+    margin-left: 18px;
+   font-family: "Cinzel", serif;
+   font-optical-sizing: auto;
+   font-weight: weight;
+   font-style: normal;
+   
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: -154px;
+}
+
+
+.nav-title {
+  color: #3279cf;
+  text-align: center;
+  font-size: 48px;
+  text-align: center;
+  font-size: 48px;
+ 
+  font-family: "Fredericka the Great", serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.underline-container {
+
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.underline {
+  width: 400px;
+  height: 0px;
+  border: 1px solid #ff0000;
+}
+
 /* Navigation */
 /* Logo */
 .logo {
@@ -82,6 +108,9 @@ body {
 
 /* Navigation Links */
 .nav-links {
+  font-family: "Nothing You Could Do", cursive;
+  font-weight: 900;
+  font-style: normal;
   margin-left: 620px;
   display: flex;
   flex-grow: 1;
@@ -115,15 +144,7 @@ body {
   transform-origin: left; /* Animate from left to right */
 }
 
-/* Header Styling */
-html {
-  scroll-behavior: smooth;
-}
-body {
-  color: white;
-  background-color: #000000;
-  font-family: Arial, sans-serif;
-}
+
 
 *,
 *::before,
@@ -133,30 +154,23 @@ body {
   padding: 0;
 }
 
-/* Next time change it */
-.intro {
-  margin-top: 22px;
-}
-
 /* Headings */
 .home-title {
-  margin-top: 60px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 900;
-  font-size: 90px;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
   color: #1a1a1a;
   text-align: center;
-  margin-bottom: -154px;
+  font-family: "Fredericka the Great", serif;
+  font-weight: 400;
+  font-style: normal;
+
+  
 
 
 }
 
-
-.nav-title {
-  text-align: center;
-  font-size: 48px;
-  margin-top: 40px;
-}
 
 .underline-container {
   display: flex;
@@ -182,6 +196,8 @@ body {
 :root {
   --navbar-height: 200px; /* Adjust based on your design */
 }
+
+
 /* Navigation */
 /* Logo */
 .logo {
@@ -240,7 +256,13 @@ header nav {
   position: fixed;
   top: 0;
   height: 13px;
-  background-color: rgba(42, 43, 44, 0.788);
+ 
+  background: linear-gradient(135deg, #02607a36, #f5f5f52f, #571d1d7e);
+
+
+
+
+
   padding: 30px;
   display: flex;
   justify-content: space-between;
@@ -265,10 +287,32 @@ header nav {
 
 /* Hero */
 .hero-container {
-  padding-top: 30px; /* Add padding equivalent to navbar height */
+  margin-top: 60px;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+ 
 }
 
 /* Profile Section with Background Image */
+/* adding vidio at hero */
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; 
+  opacity: 0.7;
+}
+
 .profile {
   width: 100%;
   background-image: url("../Assests/background.jpg");
@@ -276,7 +320,7 @@ header nav {
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
-  padding: 152px 0; /* Vertical padding inside the hero */
+ 
 }
 
 /* Floating Profile Image */
@@ -305,6 +349,10 @@ header nav {
   width: 100%;
   margin: 0 auto;
   padding: 10px;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  
+  font-style: normal;
 }
 
 /* Typing Effect */
@@ -354,14 +402,13 @@ header nav {
 }
 
 /* Hero */
-.hero-container {
-  padding-top: 60px; /* Adjusted padding to ensure it clears the nav bar */
-}
+
 
 /* Profile Section with Background Image */
 .profile {
   width: 100%;
-  background-image: url("../Assests/background.jpg");
+  
+  background-image: url("../Assests/a.mp4");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -388,14 +435,7 @@ header nav {
 }
 
 /* Centering the Typewriter Container */
-.typewriter-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 0 auto;
-  padding: 10px;
-}
+
 
 /* Typing Effect */
 .typewriter {
@@ -405,14 +445,15 @@ header nav {
   white-space: nowrap;
   border-right: 2px solid black;
   display: inline-block;
-  animation: typing 2s steps(20, end) forwards, blink 0.75s step-end infinite;
+  animation: typing 2s steps(20, end) forwards, blink 0.75s step-end ;
   animation-fill-mode: forwards; /* Keep the final state of the animation */
 }
 
 /* Typing Effect Keyframes */
 @keyframes typing {
   0% {
-    width: 0;
+    from { width: 0 }
+  to { width: 6ch } /* match character count */
   }
   100% {
     width: 20ch; /* Adjust based on the actual length of text */
@@ -431,7 +472,7 @@ header nav {
 
 /* Aabout */
 .about-container {
-
+  
   margin-top: 55px;
   display: flex;
   flex-direction: column; /* Stack items on smaller screens */
@@ -457,12 +498,14 @@ header nav {
 }
 
 .about-details {
+
   margin-top: 0; /* Reset margin-top */
   font-variant: all-small-caps;
   padding: 0 20px; /* Padding for smaller screens */
 }
 
 .about-details li {
+
   list-style-type: circle;
   color: #1b1a1a;
   margin: 15px 0; /* Adjusted margin */
@@ -471,12 +514,14 @@ header nav {
 }
 
 .about-details li:hover {
+
   margin-left: 2px;
-  color: #fa000069;
+  color: #fa000098;
   list-style-type: disc;
 }
 
 .about-span-1 {
+
   color: gray;
 }
 
@@ -485,6 +530,7 @@ header nav {
 }
 
 .about-me {
+
   margin-top: 30px;
   margin-left: 20%;
   text-align: center;
@@ -504,6 +550,7 @@ header nav {
 /* Resume */
 
 .resume-container {
+  
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 70px;
@@ -517,7 +564,12 @@ header nav {
   padding: 10px;
   border-radius: 15px;
   border: solid black;
-  background-color: #1d1c1c;
+  background: linear-gradient(to right, #1b3552, #203043, #1f3654);
+  color: #00ffff; /* Aqua text */
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .resume-item h2 {
@@ -534,88 +586,77 @@ header nav {
   margin: 10px;
   color: #646464;
 }
+/* experience */
 
-/* Experience */
-.timeline-container {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  background-color: #070707;
-  position: relative;
-  padding: 20px;
-  margin: 0 auto;
-  margin-top: 100px;
-  padding: 40px 0;
-  width: 50%;
-  max-width: 1200px;
-  border-radius: 15px;
-}
 
-/* Vertical line in the center */
-.timeline-container::before {
-  content: "";
-  position: absolute;
-  left: 40px; /* Place the line on the left side */
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background-color: #f1070723;
-  z-index: 0;
-}
+/* Section Title */
 
-/* Each timeline item */
-.timeline-item {
+/* Timeline Container */
+.experience-glass-timeline {
   display: flex;
-  position: relative;
-  margin: 30px 0;
-  justify-content: flex-start; /* Align items to the left side */
-  width: 100%;
-}
-
-/* The dot that appears on the timeline */
-.timeline-dot {
-  position: absolute;
-  left: 30px;
-  top: 55px;
-  background-color: #ff890260;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  z-index: 1;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 700px;
+  margin: auto;
+  padding: 0 1rem;
  
+  margin-top: 70px;
 }
 
-/* Content box for each experience (on the right side of the line) */
-.timeline-content {
-  border: 1px solid rgba(243, 243, 243, 0.205);
-  background-color: #161616;
-  padding: 20px;
+/* Timeline Item */
+.experience-glass-item {
   position: relative;
-  margin-left: 53px;
-  width: 57%;
-  margin-top: 11px;
+  padding-left: 2rem;
 }
 
-/* The company name */
-.timeline-company {
+.experience-glass-dot {
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #00e5ff;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.5);
+  margin-left: 32px;
+    margin-top: 40px;
+}
+
+/* Timeline Card Style */
+.experience-glass-content {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid #00e5ff;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 20px rgba(0, 229, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-glass-content:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 229, 255, 0.2);
+}
+
+.experience-glass-content h3 {
   margin: 0;
-  color: #fa8f15;
-  font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.3rem;
+  color: #ffffff;
 }
 
-/* The year of experience */
-.timeline-year {
-  color: #f08a049a;
-  font-size: 0.9em;
-  margin-top: 4px;
+.experience-glass-content span {
+  font-size: 0.9rem;
+  color: #b2ebf2;
+  display: block;
+  margin-bottom: 0.3rem;
 }
 
-/* The description of the experience */
-.timeline-description {
-  margin-top: 10px;
-  color: #b1a6a6;
-  font-size: 1em;
+.experience-glass-content p {
+  margin: 0;
+  font-size: 1rem;
+  color: #e0f7fa;
 }
+
 
 /* skills */
 
@@ -629,18 +670,24 @@ header nav {
 .skill-item {
   border-radius: 10px;
   margin-top: 40px;
-  background-color: #0e0d0d;
+  background: linear-gradient(to right, #1b3552, #203043, #1f3654);
+  color: #00aeff; /* Aqua text */
   border: 1px solid #a55513fd;
   padding: 20px;
   text-align: center;
   position: relative;
   overflow: hidden;
   transition: background-color 0.3s ease;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+
 }
 
 /* Title */
 .skill-title {
-  color: rgb(255, 136, 0);
+  
   font-size: 24px;
   font-weight: bold;
   margin: 0;
@@ -698,7 +745,7 @@ header nav {
 }
 
 .project-description {
-  width: 90%; /* Use percentage for width to make it flexible */
+  width: 90%; 
   max-width: 700px; /* Ensure the width doesn't exceed 700px on large screens */
   margin: 0 auto;
   text-align: center;
@@ -739,14 +786,15 @@ margin-top: 50px;
 }
 
 .services-grid {
-  color: #f0a400;
+ 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 180px;
   width: 350px;
-  background-color: rgb(29, 28, 28);
+  background: linear-gradient(to right, #1b3552, #203043, #1f3654);
+  color: #0084ff; /* Aqua text */
   border: 1px solid #333;
   padding: 20px;
   text-align: center;
@@ -754,6 +802,11 @@ margin-top: 50px;
   position: relative;
   z-index: 2;
   overflow: hidden  ;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+
 }
 
 .service-hr-line {
@@ -822,6 +875,7 @@ transform: translate(-50%);
 /* footer */
 
 .footer-container {
+
   margin-left: 200px;
   display: grid;
   grid-template-columns: 1fr;
@@ -831,13 +885,14 @@ transform: translate(-50%);
 
 .footer {
   margin-top: 100px;
-  background-color: #1212139c;
+  
+
   padding: 2px 0;
 }
 
 .footer-address {
   line-height: 2;
-  font-family: "Font Awesome 5 Brands", system-ui;
+  font-family: auto;
 }
 
 .footer-address h1 {
@@ -926,7 +981,10 @@ transform: translate(-50%);
 .credit {
   margin-left: 1181px;
   filter: brightness(0.2);
-  font-size: 18px;
+  font-family: "Swanky and Moo Moo", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: x-large;
 }
 
 /* Responsive styles */
@@ -934,13 +992,22 @@ transform: translate(-50%);
 /* Headings */
 @media (max-width: 768px) {
   .home-title {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
     font-size: 40px; /* Adjust font size for smaller screens */
     margin-bottom: -80px; /* Adjust margin for smaller screens */
   }
 
   .nav-title {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
     font-size: 24px; /* Adjust font size */
-    margin-top: 20px; /* Reduce the top margin */
+    margin-top: 64px; /* Reduce the top margin */
+    
   }
 }
 
@@ -953,20 +1020,28 @@ transform: translate(-50%);
 
   .nav-title {
     font-size: 48px;
-    margin-top: 40px;
+    margin-top: 64px;
   }
 }
 
 /* Extra-large devices */
 @media (min-width: 1200px) {
   .home-title {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
     font-size: 90px; /* Retain size for extra-large devices */
     margin-bottom: -154px; /* Keep original margin */
   }
 
   .nav-title {
-    font-size: 48px;
-    margin-top: 40px;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 58px;
+    margin-top: 50px;
   }
 }
 
@@ -1080,8 +1155,25 @@ transform: translate(-50%);
 
   .typewriter-container {
     padding: 5px; /* Less padding for small devices */
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
   }
 }
+
+.about-content{
+  font-family: Swanky and Moo Moo, cursive;font-weight: 400; font-style: normal; font-size: x-large;
+}
+/* About */
+@media (max-width: 430px) {
+  .about-content {
+    font-size: 10px;
+  }
+
+
+}
+
 
 
 
@@ -1237,6 +1329,10 @@ transform: translate(-50%);
   padding-block: 10px;
   flex-wrap: nowrap; /* Prevent wrapping so that items scroll horizontally */
   animation: scroll 8s linear infinite;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .skill-list li {
@@ -1445,5 +1541,119 @@ transform: translate(-50%);
 .diwalibutton:hover {
   color: #fff;
   letter-spacing: 1px;
+}
+
+
+/* scroll to top button */
+/* Scroll Button Styles */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 99;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  display: block;
+  background-color: #ffbc0014;
+  color: #71717185;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+/* About */
+@media (min-width: 400px) {
+  .scrollTopBtn {
+    flex-direction: row; /* Switch to row layout on larger screens */
+    align-items: flex-start; /* Align items to the top */
+    margin-left: 50px; /* Add left margin for desktop view */
+  }
+
+}
+
+#scrollTopBtn:hover {
+  background-color: #ffbb0038;
+  color: #000000;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-10px); }
+  50%  { transform: translateY(0); }
+  70%  { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+.bounce-on-click {
+  animation: bounce 0.5s ease;
+}
+
+
+/* sidebar icons */
+.social-icons-bar-2 {
+  position: fixed;
+  top: 40%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.social-icons-bar-2 ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-icons-bar-2 ul li {
+  margin: 10px 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icons-bar-2 ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 180px;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 0 25px 25px 0;
+  transform: translateX(120px);
+  transition: transform 0.4s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.social-icons-bar-2 ul li a:hover {
+  transform: translateX(0);
+}
+
+/* Icons */
+.social-icons-bar-2 ul li i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Gradients & custom colors */
+.social-icons-bar-2 ul li:nth-child(1) a { background: linear-gradient(135deg, #0077B5, #005983); }
+.social-icons-bar-2 ul li:nth-child(2) a { background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf); }
+.social-icons-bar-2 ul li:nth-child(3) a { background: linear-gradient(135deg, #25D366, #128C7E); }
+.social-icons-bar-2 ul li:nth-child(4) a { background: linear-gradient(135deg, #1DA1F2, #0d8ddb); }
+
+/* Tooltip text (span) */
+.social-icons-bar-2 ul li a span {
+  opacity: 0;
+  white-space: nowrap;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.social-icons-bar-2 ul li a:hover span {
+  opacity: 1;
 }
 

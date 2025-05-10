@@ -10,6 +10,9 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
+  <!-- for sidebar icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -18,6 +21,18 @@
 
 
 <body>
+
+  <!-- side bar icons -->
+  <div class="social-icons-bar-2">
+    <ul>
+      <li><a href="https://www.linkedin.com/in/anshul-sarade-678307302/" target="_blank"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a></li>
+      <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i><span>Instagram</span></a></li>
+      <li><a href="https://wa.me" target="_blank"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a></li>
+      <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i><span>Twitter</span></a></li>
+    </ul>
+  </div>
+  
+
   <!--navigation-->
   <header>
     <nav aria-label="Main Navigation">
@@ -39,15 +54,30 @@
 
 <!--Hero-->
 <div class="hero-container">
- <div class="profile" id="home">
-      <img class="img-class" src="./Assests/mylogo.png" alt="Profile picture of Anshul Sarade">
-      <div class="typewriter-container">
-        <h1 class="typewriter">Hiii, I'm <span style="color: #1588fc;">Anshul Sarade</span></h1>
-      </div>
-      <p class="intro">I'm a Fresher and Ready to work as a Java Developer.</p>
-      <p class="intro">Always enthusiastic to learn and would love to work on new technologies.</p>
- </div>
+  <div class="profile" id="home">
+    <img class="img-class" src="./Assests/mylogo.png" alt="Profile picture of Anshul Sarade">
+    <!-- Background Video -->
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source src="./Assests/a2.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Content -->
+    <div class="typewriter-container">
+      <h1 class="typewriter">Hiii, I'm <span style="color: #1588fc;">Anshul Sarade</span></h1>
+    </div>
+
+    <h2 style="color: #767676; margin-top: 10px;">Software Developer</h2>
+
+    <p class="intro">Passionate Full Stack Developer building scalable and engaging web apps.</p>
+    <p class="intro">Driven to turn ideas into impactful digital solutions.</p>
+  </div>
 </div>
+
+
+
+
+
 
   <!--About-->
   <div data-aos="fade-up">
@@ -72,7 +102,7 @@
                 <li><span class="about-span-1">Name: </span><span class="about-span-2">Anshul Sarade</span></li>
                 <li><span class="about-span-1">Date of birth: </span><span class="about-span-2">24 March 1999</span></li>
                 <li><span class="about-span-1">Address: </span><span class="about-span-2">Kothrud, Pune</span></li>
-                <li><span class="about-span-1">Zip Code: </span><span class="about-span-2">12345</span></li>
+                <li><span class="about-span-1">Zip Code: </span><span class="about-span-2">441905</span></li>
                 <li><span class="about-span-1">Email: </span><span class="about-span-2">anshulsarade@gmail.com</span></li>
                 <li><span class="about-span-1">Phone: </span><span class="about-span-2">7776942576</span></li>
               </ul>
@@ -81,24 +111,25 @@
      
 
           </div>
+          <!--  -->
 
 
      
           <div  class="about-me">
             <div data-aos="fade-up">
               <section class="fade-in">
-            <p>Hi, I'm <strong>Anshul Sarade</strong>, a passionate Full-Stack Developer based in Pune, India. With a strong foundation in backend technologies like <strong>Spring Boot</strong> and <strong>Node.js</strong>, and experience with frontend frameworks like <strong>React</strong>, I love bringing ideas to life through clean and efficient code.</p>
+            <p class="about-content">Hi, I'm <strong>Anshul Sarade</strong>, a passionate Full-Stack Developer based in Pune, India. With a strong foundation in backend technologies like <strong>Spring Boot</strong> and <strong>Node.js</strong>, and experience with frontend frameworks like <strong>React</strong>, I love bringing ideas to life through clean and efficient code.</p>
               </section>
             </div>
             <div data-aos="fade-up">
               <section class="fade-in">
-<p>Over the past few years, I’ve worked on various projects ranging from creating responsive web applications to building complex APIs. I thrive on solving problems and constantly learning new tools and technologies that improve my workflow and the user experience. Whether it's developing a seamless UI or optimizing database performance, I am committed to delivering high-quality solutions.</p>
+<p class="about-content">Over the past few years, I’ve worked on various projects ranging from creating responsive web applications to building complex APIs. I thrive on solving problems and constantly learning new tools and technologies that improve my workflow and the user experience. Whether it's developing a seamless UI or optimizing database performance, I am committed to delivering high-quality solutions.</p>
               </section>
             </div>
 
 <div data-aos="fade-up">
   <section class="fade-in">
-<p>My journey into development started with a curiosity for how things work and a desire to create impactful solutions. Now, I’m on a mission to help businesses and individuals by designing scalable, user-friendly software. When I'm not coding, you can find me playing chess or exploring new strategies in game theory.</p>
+<p class="about-content"  >My journey into development started with a curiosity for how things work and a desire to create impactful solutions. Now, I’m on a mission to help businesses and individuals by designing scalable, user-friendly software. When I'm not coding, you can find me playing chess or exploring new strategies in game theory.</p>
   </section>
 </div>        
 
@@ -160,46 +191,46 @@
           <h1 class="home-title" id="Experience">Experience</h1>
           <h1 class="nav-title">My Experience</h1>
           <div class="underline-container"> 
-            <hr class ="underline">
+        
           </div>
     
           <div data-aos="fade-up">
             <section class="fade-in">
     
-              <div class="timeline-container">
-    
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-content">
-                    <h3 class="timeline-company">Company Name</h3>
-                    <span class="timeline-year">2024</span>
-                    <p class="timeline-description">Freher</p>
+              <div class="experience-glass-timeline">
+
+                <div class="experience-glass-item">
+                  <div class="experience-glass-dot"></div>
+                  <div class="experience-glass-content">
+                    <h3>APSS Media</h3>
+                    <span>April 2025</span>
+                    <p>Jr. Software Developer</p>
                   </div>
                 </div>
-    
-    
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-content">
-                    <h3 class="timeline-company">Main flow pvt ltd</h3>
-                    <span class="timeline-year">2024</span>
-                    <p class="timeline-description">Internship</p>
+          
+                <div class="experience-glass-item">
+                  <div class="experience-glass-dot"></div>
+                  <div class="experience-glass-content">
+                    <h3>CDAC</h3>
+                    <span>March-24 - Aug-2024</span>
+                    <p>Student</p>
                   </div>
                 </div>
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-content">
-                    <h3 class="timeline-company">CDAC</h3>
-                    <span class="timeline-year">2024</span>
-                    <p class="timeline-description">Student</p>
-                  </div>
-                </div>
-     </div>
+          
+              </div>
     
             </section>
           </div>
         </section>
       </div>
+
+
+
+    
+
+  </section>
+</div>
+
     
 
 
@@ -418,12 +449,12 @@
       
           <div data-aos="fade-up">
             <section class="fade-in">
-              <div class="project-title" style="">Project Title : <span style="color: rgb(65, 70, 70);">Health Card System</span></div>
+              <div class="project-title">Project Title : <span style="color: rgb(65, 70, 70);">Health Card System</span></div>
     
     
               <div class="project-description">
     
-                <p style="color: #4d5050;">Health Card System is a web-based application developed for handling health
+                <p style="    color: #c8cdcdd1;font-family: math;/* font-style: oblique; */font-variant-caps: titling-caps;">Health Card System is a web-based application developed for handling health
                   information for both doctors and patients. It allows several features for viewing appointments,
                   user-friendly
                   interfaces to schedule appointments, secure login options, and updating health records. On the other hand,
@@ -456,10 +487,15 @@
       </div>
 
       <!--Services-->
+
+      <button id="scrollTopBtn" title="Go to top">↑</button>
+
+
+
       <div data-aos="fade-up">
         <section class="fade-in">
       <h1 class="home-title" id="project">Services</h1>
-      <h1 class="nav-title">My Services</h1>
+      <h1 class="nav-title">Services</h1>
       <div class="underline-container"> 
         <hr class ="underline">
       </div>
@@ -489,7 +525,9 @@
 
 
        <!--footer-->
+
        <footer class="footer">
+     
         <div data-aos="fade-up">
             <section class="fade-in">
                 <h1 class="home-title" id="contact">Contact</h1>
@@ -515,19 +553,23 @@
                                     <input type="email" name="email" placeholder="Email" required>
                                     <input type="text" name="phone" placeholder="Phone">
                                     <input type="text" name="message" placeholder="Enter your message" required>
-                                    <button class="footer-form-button" type="submit">Send Message</button>
+                                    <button class="footer-form-button" type="submit">Let's Talk!</button>
                                 </form>
                             </div>
                         </div>
                     </section>
                 </div>
 
+
+
+
+
                 
                 <div class="footer-social">
                     <h4>Let's connect</h4>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/anshul-sarade-678307302/"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/ANSHUL2902"><i class="fa fa-github" aria-hidden="true"></i></a>
+                       
                         <a href="https://www.facebook.com/anshulsarade"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -537,6 +579,8 @@
         </div>
         <p class="credit">Made By Anshul</p>
     </footer>
+
+
 
 
 

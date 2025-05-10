@@ -17,3 +17,27 @@
       }
     });
   });
+
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  // Show/hide on scroll
+  window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      scrollTopBtn.style.display = "block";
+    } else {
+      scrollTopBtn.style.display = "none";
+    }
+  };
+  
+  // On click: scroll to top + bounce animation
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  
+    // Add bounce class
+    scrollTopBtn.classList.add("bounce-on-click");
+  
+    // Remove class after animation to reset
+    setTimeout(() => {
+      scrollTopBtn.classList.remove("bounce-on-click");
+    }, 500);
+  });
